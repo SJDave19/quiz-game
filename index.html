@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .question-container {
+            display: none;
+        }
+    </style>
+    <script src="./script.js" defer></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+<div class="flex flex-col items-center justify-center min-h-screen">
+    <div class="text-center">
+        <h1 class="text-3xl mb-6">Quiz Game</h1>
+        <div id="difficulty-select" class="mb-4">
+            <label for="difficulty" class="block mb-2">Choisissez la difficulté:</label>
+            <select id="difficulty" class="bg-gray-800 text-white p-2 rounded">
+                <option value="facile">Facile</option>
+                <option value="normal">Normal</option>
+                <option value="difficile">Difficile</option>
+            </select>
+            <button onclick="startGame()" class="bg-blue-500 p-2 mt-4 rounded">Démarrer</button>
+        </div>
+        <div id="question-container" class="question-container">
+            <div id="question" class="text-2xl mb-4"></div>
+            <div id="answers" class="grid grid-cols-2 gap-4">
+                <!-- Answers will be dynamically inserted here -->
+            </div>
+            <div id="timer" class="mt-4 text-xl"></div>
+            <div id="score" class="mt-2 text-lg"></div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
